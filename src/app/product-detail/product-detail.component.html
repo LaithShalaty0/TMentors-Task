@@ -1,0 +1,55 @@
+<h2>
+  Project Model:
+</h2>
+
+<div class="container">
+
+  <table>
+    <th colspan="2">Project</th>
+    <tr>
+      <td>ID:</td>
+      <td *ngIf="product">{{ product.id }}</td>
+    </tr>
+    <tr>
+      <td>Name:</td>
+      <td *ngIf="product">{{ product.projectName }}</td>
+    </tr>
+    <tr>
+      <td>Create Date:</td>
+      <td *ngIf="product">{{ product.createDate }}</td>
+    </tr>
+    <tr>
+      <td>Start Date:</td>
+      <td *ngIf="product">{{ product.startDate }}</td>
+    </tr>
+    <tr>
+      <td>End Date:</td>
+      <td *ngIf="product">{{ product.endDate }}</td>
+    </tr>
+  </table>
+
+</div>
+
+<h2>
+  Members Model:
+</h2>
+
+<div class="container">
+
+  <table>
+    <th colspan="2">Member</th>
+    <tr>
+      <td>Name:</td>
+      <td *ngIf="product">&nbsp;{{ product.memberName }}</td>
+    </tr>
+    <tr>
+      <td>Title:</td>
+      <td *ngIf="product">{{ product.title }}</td>
+    </tr>
+    <tr>
+      <td>Project ID:</td>
+      <td *ngIf="product">{{ product.id }}</td>
+    </tr>
+  </table>
+
+</div>

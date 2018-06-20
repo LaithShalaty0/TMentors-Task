@@ -1,0 +1,144 @@
+.container
+{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.clear-fix{
+    clear: both;
+}
+/* Styling Form */
+
+form
+{
+    background: #DDD;
+    margin: 50px auto;
+    padding: 30px;
+    -webkit-box-shadow: 5px 12px 35px #999;
+            box-shadow: 5px 12px 35px #999;
+    border-radius: 11px;
+}
+
+    /* Styling Form Input */
+
+    form input
+    {
+        display: inline-block;
+        outline: none;
+        width: 25%;
+        padding: 10px;
+        margin: 2% 5%;
+    }
+
+    /* End Styling Form Input */
+
+    /* Styling Form Button */
+
+    button
+    {
+        display: block;
+        position: relative;
+        border: none;
+        outline: none;
+        color: #EEE;
+        margin: 33px auto 0px;
+        padding: 12px 13%;
+        position: relative;
+        cursor: pointer;
+        background-color: #285481;
+    }
+
+    button::before
+    {
+        content: '';
+        position: absolute;
+        top: -9px;
+        left: 0;
+        height: 6px;
+        width: 10%;
+        -webkit-transition: .5s all ease-out;
+        -o-transition: .5s all ease-out;
+        transition: .5s all ease-out;
+        background-color: #285481;
+    }
+
+    button::after
+    {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -9px;
+        height: 6px;
+        width: 10%;
+        -webkit-transition: .5s all ease-out;
+        -o-transition: .5s all ease-out;
+        transition: .5s all ease-out;
+        background-color: #285481;
+    }
+
+    button:hover::before,
+    button:hover::after
+    {
+        width: 100%
+    }
+
+    /* End Styling Form Button */
+
+/* End Styling Form */
+
+/* Styling Products Lists */
+
+ul li.product {
+    background: #DDD;
+    margin: 50px 5%;
+    width: 40%;
+    float: left;
+    padding: 30px;
+    -webkit-box-shadow: 5px 12px 35px #999;
+            box-shadow: 5px 12px 35px #999;
+    border-radius: 11px;
+}
+
+ul li.product input
+{
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+ul li.product div
+{
+    font-weight: bold;
+    margin: 10%;
+}
+
+ul li.product input,
+ul li.product div
+{
+    cursor: pointer;
+}
+
+ul li.product div span
+{
+    padding: 30px;
+}
+
+ul li.product button
+{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.product.clicked {
+    -webkit-transform: translateY(2px);
+        -ms-transform: translateY(2px);
+            transform: translateY(2px);
+    text-shadow: 2px 4px 10px #285481;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+/* End Styling Products Lists */

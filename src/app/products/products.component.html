@@ -1,0 +1,30 @@
+<div class="container">
+
+  <form>
+    <input #titleInput placeholder="Title" />
+    <input #projectNameInput placeholder="Project Name" />
+    <input #memberNameInput placeholder="Member Name" />
+    <input #createDateInput placeholder="Create Date" />
+    <input #startDateInput placeholder="Start Date" />
+    <input #endDateInput placeholder="End Date" />
+    <button (click)="add(titleInput.value, projectNameInput.value, memberNameInput.value, createDateInput.value, startDateInput.value,
+    endDateInput.value); titleInput.value=''; projectNameInput.value=''; memberNameInput.value=''; createDateInput.value=''; startDateInput.value='';
+    endDateInput.value='';">Add</button>
+  </form>
+
+  <ul>
+    <li class="product" [@flyInOut] [class.clicked]="selectedProduct && selectedProduct.id === product.id" *ngFor="let product of products">
+      <input type="text" [(ngModel)]='product.memberName'>
+      <div (click)="onSelectProduct(product)">ID: <span>{{ product.id }}</span></div>
+      <div (click)="onSelectProduct(product)">Member Name: <span>{{ product.memberName }}</span></div>
+
+      <button (click)="save(product)">Save</button>
+      <button (click)="delete(product.id)">Delete</button>
+    </li>
+  </ul>
+
+  <div class="clear-fix"></div>
+
+</div>
+
+<app-product-detail [product]="selectedProduct"></app-product-detail>
